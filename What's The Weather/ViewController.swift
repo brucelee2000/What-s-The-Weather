@@ -32,18 +32,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 var contentArray = data2Text?.componentsSeparatedByString("<span class=\"phrase\">") as [String]
                 var content1 = contentArray[1].componentsSeparatedByString("</span>") as [String]
                 var weather = content1[0].stringByReplacingOccurrencesOfString("&deg;", withString: "º")
-                self.weatherLabel.text = weather
+                
+                // Submits a block for asynchronous execution on a dispatch queue and returns immediately.
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.weatherLabel.text = weather
+                    self.blurredView.hidden = false
+                    self.weatherLabel.hidden = false
+                })
             } else {
-                self.weatherLabel.text = "Cannot find the city - please try again"
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.weatherLabel.text = "Cannot find the city - please try again"
+                    self.blurredView.hidden = false
+                    self.weatherLabel.hidden = false
+                })
             }
-
-            self.blurredView.hidden = false
-            self.weatherLabel.hidden = false
         }
         
         task.resume()
-        
-        println(urlString)
     }
     
 

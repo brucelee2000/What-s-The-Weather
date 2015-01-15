@@ -60,11 +60,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yz0-iS-DMm">
-                                            <rect key="frame" x="148" y="119" width="305" height="125"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="305" id="3Jw-NM-PEG"/>
-                                                <constraint firstAttribute="height" constant="125" id="r9c-h2-fbC"/>
-                                            </constraints>
+                                            <rect key="frame" x="8" y="171" width="584" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -72,7 +68,9 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Yz0-iS-DMm" firstAttribute="centerY" secondItem="umz-Om-rBr" secondAttribute="centerY" id="G98-xd-V5S"/>
+                                        <constraint firstItem="Yz0-iS-DMm" firstAttribute="leading" secondItem="umz-Om-rBr" secondAttribute="leading" constant="8" id="KfV-MJ-3RZ"/>
                                         <constraint firstItem="Yz0-iS-DMm" firstAttribute="centerX" secondItem="umz-Om-rBr" secondAttribute="centerX" id="sFi-Ps-6yf"/>
+                                        <constraint firstAttribute="trailing" secondItem="Yz0-iS-DMm" secondAttribute="trailing" constant="8" id="tVH-Vt-W7C"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="light"/>
